@@ -1,6 +1,6 @@
 # TodoListCLI
 
-This is a simple Todo List application that runs in the terminal.
+This is a simple Todo List application that runs in the terminal written with node and javascript.
 
 ## Description
 

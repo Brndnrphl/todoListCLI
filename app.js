@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { table } = require("table");
 const readline = require("readline");
+const colors = require("colors");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -22,7 +23,7 @@ function checkBlank(taskInput) {
   if (!taskInput.trim()) {
     console.clear();
     console.log(generateTable());
-    console.log("\nInput cannot be blank.\n");
+    console.log("\nInput cannot be blank.\n".red);
     displayOptions();
     return true;
   }
@@ -62,7 +63,7 @@ function markCompleted(taskInput) {
   if (index === -1) {
     console.clear();
     console.log(generateTable());
-    console.log("\nTask not found.\n");
+    console.log("\nTask not found.\n".red);
     return;
   }
   tasks[index][1] = "completed";
@@ -80,7 +81,7 @@ function deleteTask(taskInput) {
   } else {
     console.clear();
     console.log(generateTable());
-    console.log("Task not found.\n");
+    console.log("Task not found.\n".red);
   }
 }
 
@@ -123,7 +124,7 @@ function askQuestion() {
       console.clear();
       console.log(generateTable());
       displayOptions();
-      console.log("Invalid choice\n");
+      console.log("Invalid choice\n".red);
       askQuestion();
     }
   });

@@ -12,6 +12,7 @@
   "author": "brndnrphl",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "table": "^6.8.1"
   }
 }

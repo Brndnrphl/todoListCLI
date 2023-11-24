@@ -42,6 +42,7 @@ function newTask(taskInput) {
   tasks.push([taskInput, "pending", getCurrentDateTime()]);
   console.clear();
   console.log(generateTable());
+  console.log(`Task ${taskInput} has successfully been created.\n`.green);
 }
 
 function findTaskIndex(taskInput) {
@@ -69,15 +70,18 @@ function markCompleted(taskInput) {
   tasks[index][1] = "completed";
   console.clear();
   console.log(generateTable());
+  console.log(`Task ${tasks[index][0]} has been marked as completed.\n`.green);
 }
 
 function deleteTask(taskInput) {
   let index = findTaskIndex(taskInput);
   if (index !== -1) {
+    let taskName = tasks[index][0];
     tasks.splice(index, 1);
+    let output = generateTable();
     console.clear();
-    console.log(generateTable());
-    console.log(`task ${taskInput} has been deleted`);
+    console.log(output);
+    console.log(`Task ${taskName} has been deleted.\n`.green);
   } else {
     console.clear();
     console.log(generateTable());

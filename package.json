@@ -1,0 +1,17 @@
+{
+  "name": "todolistcli",
+  "version": "1.0.0",
+  "description": "a simple todolist app inside the terminal",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todolist"
+  ],
+  "author": "brndnrphl",
+  "license": "ISC",
+  "dependencies": {
+    "table": "^6.8.1"
+  }
+}
